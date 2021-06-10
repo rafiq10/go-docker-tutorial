@@ -27,7 +27,6 @@ RUN --mount=target=. \
   --mount=type=cache,target=/root/.cache/golangci-lint \
   golangci-lint run --timeout 10m0s ./...
 
-RUN sudo docker login -u bilrafal -ko6tu6li
 FROM scratch AS bin-unix
 COPY --from=build /out/example /
 
