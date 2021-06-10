@@ -12,10 +12,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Run lint
-        uses: make lint
+        run: make lint
       - name: Run unit tests
-        uses: make unit-test
+        run: make unit-test
       - name: Build Linux binary
-        uses: make PLATFORM=linus/amd64
+        run: make PLATFORM=linus/amd64
       - name: Build Windows binary
-        uses: make PLATFORM=windows/amd64
+        run: make PLATFORM=windows/amd64
